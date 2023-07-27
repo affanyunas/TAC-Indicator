@@ -1,0 +1,35 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © pidnam
+
+//@version=5
+indicator("Toleransi Average Chandle (TAC)", shorttitle="TAC", overlay=false)
+
+// Function to calculate EMA from closing prices
+ema(close, periods) =>
+    emaValue = close[0]
+    for i = 1 to periods - 1
+        emaValue := (close[i] - emaValue) / periods + emaValue
+    emaValue
+
+// Function to calculate spread between close and EMA
+spread(close, emaValue) =>
+    close - emaValue
+
+// Function to get TAC value based on proximity to EMA
+getTACValue(close, emaValue) =>
+    close - emaValue
+
+// User-defined input for EMA period
+emaPeriods = input(20, title="EMA Periods")
+
+// Calculate EMA
+emaValue = ema(close, emaPeriods)
+
+// Calculate TAC (selisih harga penutupan dengan EMA)
+tacValue = getTACValue(close, emaValue)
+
+// Define colors for TAC
+tacColor = tacValue > 0 ? color.green : tacValue < 0 ? color.red : color.white
+
+// Plot the TAC as a line with colored line based on proximity to EMA
+plot(tacValue, title="TAC", color=tacColor, linewidth=2)
