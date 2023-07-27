@@ -1,5 +1,4 @@
 Indikator TAC (Toleransi Rata-Rata Chandle)
-Indikator TAC di [eng]()
 
 **Filosofi TAC:**
 TAC (Tolerance Average Chandle) adalah indikator untuk platform TradingView yang digunakan untuk menghitung selisih antara harga penutupan dan Exponential Moving Average (EMA) untuk setiap candle selama periode waktu tertentu. Indikator ini membantu trader dalam mengidentifikasi perubahan tren harga berdasarkan perbedaan antara harga penutupan dan EMA.
@@ -32,3 +31,5 @@ Indikator ini disediakan di bawah Mozilla Public License 2.0, yang berarti Anda 
 Selamat trading menggunakan indikator TAC! Semoga indikator ini membantu Anda dalam mengidentifikasi peluang perdagangan yang lebih baik. Jangan ragu untuk memberikan umpan balik atau pertanyaan di bagian "Masalah" jika Anda memiliki saran atau ingin berdiskusi lebih lanjut tentang indikator ini.
 
 Terima kasih telah menggunakan indikator TAC dan semoga sukses dalam trading Anda!
+
+read [eng](https://github.com/affanyunas/tac-Indicator/blob/main/README.md)
